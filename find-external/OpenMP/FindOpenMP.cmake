@@ -403,7 +403,7 @@ function(_OPENMP_GET_FLAGS LANG FLAG_MODE OPENMP_FLAG_VAR OPENMP_LIB_NAMES_VAR)
               "${OPENMP_FLAG}"
               PARENT_SCOPE)
           set("${OPENMP_LIB_NAMES_VAR}"
-              "libiomp5md"
+              "libomp"
               PARENT_SCOPE)
           break()
         endif()

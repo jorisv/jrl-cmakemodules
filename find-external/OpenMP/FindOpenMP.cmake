@@ -99,7 +99,7 @@ function(_OPENMP_FLAG_CANDIDATES LANG)
     set(OMP_FLAG_GNU "-fopenmp")
     set(OMP_FLAG_LCC "-fopenmp")
     set(OMP_FLAG_Clang "-fopenmp=libomp" "-fopenmp=libiomp5" "-fopenmp"
-                       "-Xclang -fopenmp")
+                       "-Xclang -fopenmp=libiomp5md" "-Xclang -fopenmp")
     set(OMP_FLAG_AppleClang "-Xclang -fopenmp")
     set(OMP_FLAG_HP "+Oopenmp")
     if(WIN32)

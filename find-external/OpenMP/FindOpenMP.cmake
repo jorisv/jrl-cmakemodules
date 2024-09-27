@@ -387,7 +387,7 @@ function(_OPENMP_GET_FLAGS LANG FLAG_MODE OPENMP_FLAG_VAR OPENMP_LIB_NAMES_VAR)
       # Check for separate OpenMP library for Clang on Windows
       find_library(
         OpenMP_libomp_LIBRARY
-        NAMES libiomp5 libomp libgomp
+        NAMES libiomp5md libomp libgomp
         HINTS ${CMAKE_${LANG}_IMPLICIT_LINK_DIRECTORIES})
       mark_as_advanced(OpenMP_libomp_LIBRARY)
       if(OpenMP_libomp_LIBRARY)
@@ -403,7 +403,7 @@ function(_OPENMP_GET_FLAGS LANG FLAG_MODE OPENMP_FLAG_VAR OPENMP_LIB_NAMES_VAR)
               "${OPENMP_FLAG}"
               PARENT_SCOPE)
           set("${OPENMP_LIB_NAMES_VAR}"
-              "libomp"
+              "libiomp5md"
               PARENT_SCOPE)
           break()
         endif()
